@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="https://q.qlogo.cn/g?b=qq&nk=2893265066&s=640">
+    <meta content="阿狼的个人主页,小狼屋,欢迎来玩{^V^}!" name="descriptison">
+    <meta content="阿狼,AL,ALWOLF,初生的A狼" name="keywords">
+    <title>阿狼的个人主页,小狼屋</title>
+    <script defer="defer" src="./js/chunk-vendors.9c2c267e.js"></script>
+    <script defer="defer" src="./js/app.ae7ac40d.js"></script>
+    <link href="./css/chunk-vendors.13243bcb.css" rel="stylesheet">
+    <link rel="stylesheet" href="./live2d/waifu.min.css?v=1.4.2">
+    <link href="./css/app.f2581d32.css" rel="stylesheet">
+    <script src="https://cdn.alwolf.cn/js/alapi_log.js"></script>
+    <script src="./live2d/jquery.min.js"></script>
+    <script src="./live2d/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but alwolf-main-two doesn't work properly without JavaScript enabled. Please enable
+            it to continue.</strong>
+    </noscript>
+    <div id="app">
+    </div>
+    <div class="waifu" id="_live2d">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    <script src="./live2d/waifu-tips.js"></script>
+    <script src="./live2d/live2d.js"></script>
+    <script type="text/javascript">
+        live2d_settings['modelId'] = 3;
+        live2d_settings['modelTexturesId'] = 3;
+        live2d_settings['modelStorage'] = false;
+        live2d_settings['canCloseLive2d'] = false;
+        live2d_settings['canTurnToHomePage'] = false;
+        live2d_settings['waifuSize'] = '600x535';
+        live2d_settings['waifuTipsSize'] = '300x100';
+        live2d_settings['waifuEdgeSide'] = 'right:30';
+        live2d_settings['waifuToolTop'] = '-60px';
+        initModel("./live2d/waifu-tips.json")
+    </script>
+    <script type="text/javascript">
+        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+        var browser = navigator.userAgent.toLowerCase();
+        var isMobile = false;
+        for (var i = 0; i < mobileAgent.length; i++) {
+            if (browser.indexOf(mobileAgent[i]) != -1) {
+                isMobile = true;
+                document.getElementById("_live2d").style = "display:none"
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
